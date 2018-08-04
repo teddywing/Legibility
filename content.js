@@ -4,4 +4,9 @@ if (chrome) {
 	browser = chrome;
 }
 
-browser.runtime.sendMessage({ url: 'tmp' });
+var domain = location.hostname
+	.split('.')
+	.slice(-2)
+	.join('.');
+
+browser.runtime.sendMessage({ domain: domain });

@@ -4,6 +4,6 @@ if (chrome) {
 	browser = chrome;
 }
 
-browser.runtime.onMessage.addListener(function() {
-	browser.tabs.insertCSS({ file: '/css/example.com.css' });
+browser.runtime.onMessage.addListener(function(message) {
+	browser.tabs.insertCSS({ file: '/css/' + message.domain + '.css' });
 });
