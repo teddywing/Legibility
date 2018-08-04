@@ -4,11 +4,23 @@
 	"description": "Apply custom CSS to web pages.",
 	"version": "0.0.1",
 
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": ["content.js"]
+		}
+	],
+
 	"background": {
 		"scripts": ["background.js"]
 	},
 
 	"permissions": [
-		"activeTab"
+		"activeTab",
+		"http://*/*",
+		"https://*/*"
 	]
 }
