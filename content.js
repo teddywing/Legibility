@@ -21,9 +21,6 @@ if (chrome) {
 	browser = chrome;
 }
 
-var domain = location.hostname
-	.split('.')
-	.slice(-2)
-	.join('.');
+var domain = location.hostname;
 
 browser.runtime.sendMessage({ domain: domain });
