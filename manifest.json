@@ -4,6 +4,12 @@
 	"description": "Apply custom CSS to web pages.",
 	"version": "0.0.1",
 
+	"applications": {
+		"gecko": {
+			"id": "com.teddywing@legibility"
+		}
+	},
+
 	"content_scripts": [
 		{
 			"matches": [
