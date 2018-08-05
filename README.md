@@ -9,8 +9,8 @@ experience.
 
 
 ## Usage
-Let's say we want to modify the font of an article on `www.example.com`. Add an
-`www.example.com.css` file in the extension's `css/` directory:
+Let’s say we want to modify the font of an article on `www.example.com`. Add an
+`www.example.com.css` file in the extension’s `css/` directory:
 
 ``` css
 /* legibility/css/www.example.com.css */
@@ -21,7 +21,7 @@ article {
 
 Upon reloading the page, the custom stylesheet should now be applied.
 
-Stylesheets must use a filename matching the website's domain (including
+Stylesheets must use a filename matching the website’s domain (including
 subdomains), and terminated by a `.css` extension.
 
 
@@ -32,21 +32,21 @@ modify stylesheets in the `css/` directory.
 
 ### Chrome
 Begin by cloning this repository. Open the Extensions page
-(`chrome://extensions/`) and click the "Load unpacked" button. In the resulting
-file browser, select the extension's directory.
+(`chrome://extensions/`) and click the “Load unpacked” button. In the resulting
+file browser, select the extension’s directory.
 
 
 ### Firefox
-This extension is unsigned. Refer to "What are my options if I want to install
-unsigned extensions in Firefox?" in
+This extension is unsigned. Refer to “What are my options if I want to install
+unsigned extensions in Firefox?” in
 https://wiki.mozilla.org/Add-ons/Extension_Signing#FAQ before attempting to
 install it.
 
 	cd '~/Library/Application Support/Firefox/Profiles/PROFILE_DIRECTORY/extensions'
 	git clone https://github.com/teddywing/Legibility.git 'com.teddywing@legibility'
 
-Relaunch Firefox and open the Add-ons page (`about:addons`). Click the "Enable"
-button on Legibility's row.
+Relaunch Firefox and open the Add-ons page (`about:addons`). Click the “Enable”
+button on Legibility’s row.
 
 
 ## License
