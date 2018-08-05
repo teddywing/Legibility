@@ -42,8 +42,8 @@ unsigned extensions in Firefox?” in
 https://wiki.mozilla.org/Add-ons/Extension_Signing#FAQ before attempting to
 install it.
 
-	cd '~/Library/Application Support/Firefox/Profiles/PROFILE_DIRECTORY/extensions'
-	git clone https://github.com/teddywing/Legibility.git 'com.teddywing@legibility'
+	$ cd '~/Library/Application Support/Firefox/Profiles/PROFILE_DIRECTORY/extensions'
+	$ git clone https://github.com/teddywing/Legibility.git 'com.teddywing@legibility'
 
 Relaunch Firefox and open the Add-ons page (`about:addons`). Click the “Enable”
 button on Legibility’s row.
