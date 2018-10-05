@@ -22,5 +22,10 @@ if (chrome) {
 }
 
 browser.runtime.onMessage.addListener(function(message) {
-	browser.tabs.insertCSS({ file: '/css/' + message.domain + '.css' });
+	browser.webNavigation.onCompleted.addListener(function(details) {
+		browser.tabs.insertCSS(
+			details.tabId,
+			{ file: '/css/' + message.domain + '.css' }
+		);
+	});
 });
