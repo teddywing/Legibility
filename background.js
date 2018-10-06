@@ -23,9 +23,13 @@ if (chrome) {
 
 browser.runtime.onMessage.addListener(function(message) {
 	browser.webNavigation.onCompleted.addListener(function(details) {
-		browser.tabs.insertCSS(
-			details.tabId,
-			{ file: '/css/' + message.domain + '.css' }
-		);
+		var url = new URL(details.url);
+
+		if (url.hostname === message.domain) {
+			browser.tabs.insertCSS(
+				details.tabId,
+				{ file: '/css/' + message.domain + '.css' }
+			);
+		}
 	});
 });
