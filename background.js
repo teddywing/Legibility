@@ -38,6 +38,7 @@ browser.runtime.onMessage.addListener(function(message) {
 });
 
 
+// TODO: Consider choosing a different wildcard character, as '*' is troublesome in a shell (maybe '%')
 // Build a list of wildcard domains from the given hostname.
 //
 // Example:
