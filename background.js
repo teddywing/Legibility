@@ -35,7 +35,12 @@ browser.runtime.onMessage.addListener(function(message) {
 });
 
 
-// function insert_css (hostname) {
+// Build a list of wildcard domains from the given hostname.
+//
+// Example:
+//
+//     wildcard_domains('en.wikipedia.org');
+//     => [ '*', '*.org', '*.wikipedia.org', 'en.wikipedia.org' ]
 function wildcard_domains (hostname) {
 	var domain_parts = hostname.split('.');
 	var domains = [];
