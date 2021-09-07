@@ -26,10 +26,13 @@ browser.runtime.onMessage.addListener(function(message) {
 		var url = new URL(details.url);
 
 		if (url.hostname === message.domain) {
-			browser.tabs.insertCSS(
-				details.tabId,
-				{ file: '/css/' + message.domain + '.css' }
-			);
+			wildcard_domains(message.domain)
+				.forEach(function(domain) {
+					browser.tabs.insertCSS(
+						details.tabId,
+						{ file: '/css/' + domain + '.css' }
+					);
+				});
 		}
 	});
 });
