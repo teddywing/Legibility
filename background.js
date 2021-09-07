@@ -33,3 +33,37 @@ browser.runtime.onMessage.addListener(function(message) {
 		}
 	});
 });
+
+
+// function insert_css (hostname) {
+function wildcard_domains (hostname) {
+	var domain_parts = hostname.split('.');
+	var domains = [];
+
+	// while (domain_parts.length > 0) {
+	// 	domains.unshift(domain_parts.pop());
+    //
+	// 	var s = domains.join('.');
+	// }
+
+	for (var i = domain_parts.length - 1; i >= 0; i--) {
+		var domain;
+
+		if (domains[domains.length - 1]) {
+			var domain = domain_parts[i] + '.' + domains[domains.length - 1];
+		}
+		else {
+			var domain = domain_parts[i];
+		}
+
+		domains.push(domain);
+	}
+
+	for (var i = 0; i < domains.length - 1; i++) {
+		domains[i] = '*.' + domains[i];
+	}
+
+	domains.unshift('*');
+
+	return domains;
+}
