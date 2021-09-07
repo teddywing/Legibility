@@ -45,12 +45,6 @@ function wildcard_domains (hostname) {
 	var domain_parts = hostname.split('.');
 	var domains = [];
 
-	// while (domain_parts.length > 0) {
-	// 	domains.unshift(domain_parts.pop());
-    //
-	// 	var s = domains.join('.');
-	// }
-
 	for (var i = domain_parts.length - 1; i >= 0; i--) {
 		var domain;
 
