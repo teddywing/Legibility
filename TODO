@@ -1,0 +1,5 @@
+TODO
+
+2018.08.03:
+- Make extension icon grey when no CSS file activated, glow when a CSS file was
+  found.

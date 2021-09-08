@@ -26,10 +26,46 @@ browser.runtime.onMessage.addListener(function(message) {
 		var url = new URL(details.url);
 
 		if (url.hostname === message.domain) {
-			browser.tabs.insertCSS(
-				details.tabId,
-				{ file: '/css/' + message.domain + '.css' }
-			);
+			wildcard_domains(message.domain)
+				.forEach(function(domain) {
+					browser.tabs.insertCSS(
+						details.tabId,
+						{ file: '/css/' + domain + '.css' }
+					);
+				});
 		}
 	});
 });
+
+
+// Build a list of wildcard domains from the given hostname.
+//
+// Example:
+//
+//     wildcard_domains('en.wikipedia.org');
+//     => [ '%', '%.org', '%.wikipedia.org', 'en.wikipedia.org' ]
+function wildcard_domains (hostname) {
+	var domain_parts = hostname.split('.');
+	var domains = [];
+
+	for (var i = domain_parts.length - 1; i >= 0; i--) {
+		var domain;
+
+		if (domains[domains.length - 1]) {
+			var domain = domain_parts[i] + '.' + domains[domains.length - 1];
+		}
+		else {
+			var domain = domain_parts[i];
+		}
+
+		domains.push(domain);
+	}
+
+	for (var i = 0; i < domains.length - 1; i++) {
+		domains[i] = '%.' + domains[i];
+	}
+
+	domains.unshift('%');
+
+	return domains;
+}
