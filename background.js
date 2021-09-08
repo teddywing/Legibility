@@ -1,4 +1,4 @@
-// Copyright (c) 2018  Teddy Wing
+// Copyright (c) 2018, 2021  Teddy Wing
 //
 // This file is part of Legibility.
 //
