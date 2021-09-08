@@ -30,12 +30,6 @@ This extension should be installed unpacked to allow you to freely add and
 modify stylesheets in the `css/` directory.
 
 
-### Chrome
-Begin by cloning this repository. Open the Extensions page
-(`chrome://extensions/`) and click the “Load unpacked” button. In the resulting
-file browser, select the extension’s directory.
-
-
 ### Firefox
 This extension is unsigned. Refer to “What are my options if I want to install
 unsigned extensions in Firefox?” in
@@ -47,6 +41,12 @@ install it.
 
 Relaunch Firefox and open the Add-ons page (`about:addons`). Click the “Enable”
 button on Legibility’s row.
+
+
+### Chrome
+Begin by cloning this repository. Open the Extensions page
+(`chrome://extensions/`) and click the “Load unpacked” button. In the resulting
+file browser, select the extension’s directory.
 
 
 ## License
