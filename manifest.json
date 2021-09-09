@@ -29,5 +29,16 @@
 		"webNavigation",
 		"http://*/*",
 		"https://*/*"
-	]
+	],
+
+	"commands": {
+		"reload": {
+			"suggested_key": {
+				"default": "Ctrl+Alt+L",
+				"mac": "MacCtrl+Alt+L"
+			},
+
+			"description": "Reload the extension"
+		}
+	}
 }
