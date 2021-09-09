@@ -52,10 +52,10 @@ function wildcard_domains (hostname) {
 		var domain;
 
 		if (domains[domains.length - 1]) {
-			var domain = domain_parts[i] + '.' + domains[domains.length - 1];
+			domain = domain_parts[i] + '.' + domains[domains.length - 1];
 		}
 		else {
-			var domain = domain_parts[i];
+			domain = domain_parts[i];
 		}
 
 		domains.push(domain);
