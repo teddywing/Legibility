@@ -25,6 +25,16 @@ Stylesheets must use a filename matching the website’s domain (including
 subdomains), and terminated by a `.css` extension.
 
 
+### Domain wildcards
+Styles can be applied to multiple domains or subdomains using domain-level
+wildcards. For the host `www.example.com`, the following CSS files will apply:
+
+* `%.css`: Applies styles to all hosts
+* `%.com.css`: Applies styles to all `.com` domains
+* `%.example.com.css`: Applies styles to all subdomains under `example.com`
+* `www.example.com.css`: Applies styles to the `www.example.com` host
+
+
 ## Install
 This extension should be installed unpacked to allow you to freely add and
 modify stylesheets in the `css/` directory.
