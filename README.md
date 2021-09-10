@@ -60,5 +60,5 @@ file browser, select the extension’s directory.
 
 
 ## License
-Copyright © 2018 Teddy Wing. Licensed under the GNU GPLv3+ (see the included
-COPYING file).
+Copyright © 2018, 2021 Teddy Wing. Licensed under the GNU GPLv3+ (see the
+included COPYING file).
