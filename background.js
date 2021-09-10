@@ -69,3 +69,11 @@ function wildcard_domains (hostname) {
 
 	return domains;
 }
+
+
+// Keyboard shortcuts.
+browser.commands.onCommand.addListener(function(command) {
+	if (command === 'reload') {
+		browser.runtime.reload();
+	}
+});
