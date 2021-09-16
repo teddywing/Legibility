@@ -1,0 +1,18 @@
+CHANGELOG
+=========
+
+v0.1.0 (2021-09-16):
+	Additions:
+
+	* Support wildcard CSS files to apply styles to all domains under a
+	  wildcard.
+	* Reload the extension with a keyboard shortcut (by default C-M-l).
+
+	Changes:
+
+	* Remove unnecessary `activeTab` permission.
+
+v0.0.1 (2018-10-06):
+	First public release.
+
+ vim:tw=80:comments=:fo+=n:formatlistpat=^\\s*\\*\\s*
