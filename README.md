@@ -54,9 +54,12 @@ button on Legibility’s row.
 
 
 ### Chrome
-Begin by cloning this repository. Open the Extensions page
-(`chrome://extensions/`) and click the “Load unpacked” button. In the resulting
-file browser, select the extension’s directory.
+	$ git clone https://github.com/teddywing/Legibility.git
+	$ cd Legibility
+	$ make chrome
+
+Open the Extensions page (`chrome://extensions/`) and click the “Load unpacked”
+button. In the resulting file browser, select the extension’s directory.
 
 
 ## License

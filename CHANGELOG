@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+v0.1.1 (2021-09-21):
+	Fixes:
+
+	* Remove the extension reload keyboard shortcut in Chrome, as it isn't
+	  necessary in Chrome and caused a load error.
+
 v0.1.0 (2021-09-16):
 	Additions:
 
